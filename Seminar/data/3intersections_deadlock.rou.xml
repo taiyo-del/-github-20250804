@@ -1,0 +1,90 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" length="5" maxSpeed="13.89" sigma="0.1" minGap="1.0"  impatience="1.0"/>
+    <!--
+    <route id="route_WE" edges="E0 E3 E6 E9" />
+    <route id="route_NS0" edges="-E1 E2" />
+    <route id="route_NS1" edges="-E4 E5" />
+    <route id="route_NS2" edges="-E7 E8" />
+    <route id="route_SN0" edges="-E2 E1" />
+    <route id="route_SN1" edges="-E5 E4" />
+    <route id="route_SN2" edges="-E8 E7" />
+    <route id="route_EW" edges="-E9 -E6 -E3 -E0" />
+
+    <flow id="flow_WE" type="car" route="route_WE" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_NS0" type="car" route="route_NS0" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_NS1" type="car" route="route_NS1" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_NS2" type="car" route="route_NS2" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_SN0" type="car" route="route_SN0" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_SN1" type="car" route="route_SN1" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_SN2" type="car" route="route_SN2" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    <flow id="flow_EW" type="car" route="route_EW" begin="0" end="3600" vehsPerHour="600" departLane="best" departSpeed="max"/>
+    -->
+    <!-- 幹線方向 W→E -->
+    <!--論文の車両数 W→E　600台/h　それ以外(南北、E→W)　200台/h -->
+    <!--
+    <route id="route_WE" edges="E0 E3 E6 E9" />
+    <route id="route_NS0" edges="-E1 E2" />
+    <route id="route_NS1" edges="-E4 E5" />
+    <route id="route_NS2" edges="-E7 E8" />
+    <route id="route_SN0" edges="-E2 E1" />
+    <route id="route_SN1" edges="-E5 E4" />
+    <route id="route_SN2" edges="-E8 E7" />
+    <route id="route_EW" edges="-E9 -E6 -E3 -E0" />
+
+    <flow id="flow_WE" type="car" route="route_WE" begin="0" end="3600" vehsPerHour="600"/>
+    <flow id="flow_NS0" type="car" route="route_NS0" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_NS1" type="car" route="route_NS1" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_NS2" type="car" route="route_NS2" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_SN0" type="car" route="route_SN0" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_SN1" type="car" route="route_SN1" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_SN2" type="car" route="route_SN2" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="flow_EW" type="car" route="route_EW" begin="0" end="3600" vehsPerHour="200"/>
+    -->
+
+    <!--
+    <route id="route_WE" edges="E0 E3 E6 E9" />
+    <route id="route_NS0" edges="-E1 E2" />
+    <route id="route_NS1" edges="-E4 E5" />
+    <route id="route_NS2" edges="-E7 E8" />
+    <route id="route_SN0" edges="-E2 E1" />
+    <route id="route_SN1" edges="-E5 E4" />
+    <route id="route_SN2" edges="-E8 E7" />
+    -->
+    <!--
+    <route id="route_EW" edges="-E9 -E6 -E3 -E0" />
+    <route id="route_NS0W" edges="-E1 -E0" />
+    <route id="route_NS0E" edges="-E1 E3 E6 E9" />
+    <route id="route_NS1W" edges="-E4 -E3 -E0" />
+    <route id="route_NS1E" edges="-E4 E6 E9" />
+    <route id="route_NS2W" edges="-E7 -E6 -E3 -E0" />
+    <route id="route_NS2E" edges="-E7 E9" />
+    <route id="route_SN0W" edges="-E2 -E0" />
+    <route id="route_SN0E" edges="-E2 E3 E6 E9" />
+    <route id="route_SN1W" edges="-E5 -E3 -E0" />
+    <route id="route_SN1E" edges="-E5 E6 E9" />
+    <route id="route_SN2W" edges="-E8 -E6 -E3 -E0" />
+    <route id="route_SN2E" edges="-E8 E9" />
+
+    <flow id="main_flow" type="car" route="route_WE" begin="0" end="3600" vehsPerHour="600"/>
+    <flow id="main_flow2" type="car" route="route_EW" begin="0" end="3600" vehsPerHour="600"/>
+    <flow id="side1_flow1" type="car" route="route_NS0" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side1_flow2" type="car" route="route_NS1" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side2_flow1" type="car" route="route_NS2" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side2_flow2" type="car" route="route_NS0W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side3_flow1" type="car" route="route_NS0E" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side3_flow2" type="car" route="route_NS1W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side4_flow1" type="car" route="route_NS1E" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side4_flow2" type="car" route="route_NS2W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side5_flow1" type="car" route="route_NS2E" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side5_flow2" type="car" route="route_SN0" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side6_flow1" type="car" route="route_SN1" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side6_flow2" type="car" route="route_SN2" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side7_flow1" type="car" route="route_SN0W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side7_flow2" type="car" route="route_SN0E" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side8_flow1" type="car" route="route_SN1W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side8_flow2" type="car" route="route_SN1E" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side9_flow1" type="car" route="route_SN2W" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="side9_flow2" type="car" route="route_SN2E" begin="0" end="3600" vehsPerHour="100"/>
+    -->
+    
+</routes>
